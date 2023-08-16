@@ -1,0 +1,6280 @@
+{
+	"buses" : 
+	[
+		{
+			"frames" : 
+			[
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "ACCELEROMETER",
+					"pdus" : 
+					[
+						{
+							"id" : "0x228",
+							"length" : 8,
+							"name" : "ACCELEROMETER",
+							"signals" : 
+							[
+								{
+									"bit-size" : 15,
+									"factor" : 0.001,
+									"max" : 20,
+									"min" : -20,
+									"name" : "ACCEL_X",
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 15,
+									"max" : 32767,
+									"min" : 0,
+									"name" : "ACCEL_Z",
+									"start-bit" : -24
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "ACC_CONTROL",
+					"pdus" : 
+					[
+						{
+							"id" : "0x343",
+							"length" : 8,
+							"name" : "ACC_CONTROL",
+							"signals" : 
+							[
+								{
+									"bit-size" : 16,
+									"factor" : 0.001,
+									"max" : 20,
+									"min" : -20,
+									"name" : "ACCEL_CMD",
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 8,
+									"factor" : 0.05,
+									"max" : 0,
+									"min" : 0,
+									"name" : "ACCEL_CMD_ALT",
+									"start-bit" : -40
+								},
+								{
+									"bit-size" : 1,
+									"name" : "CANCEL_REQ",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 1,
+									"name" : "DISTANCE",
+									"start-bit" : 20
+								},
+								{
+									"bit-size" : 1,
+									"name" : "MINI_CAR",
+									"start-bit" : 21
+								},
+								{
+									"bit-size" : 1,
+									"name" : "PERMIT_BRAKING",
+									"start-bit" : 30
+								},
+								{
+									"bit-size" : 1,
+									"name" : "RELEASE_STANDSTILL",
+									"start-bit" : 31
+								},
+								{
+									"bit-size" : 2,
+									"max" : 3,
+									"min" : 0,
+									"name" : "SET_ME_X01",
+									"start-bit" : 22
+								},
+								{
+									"bit-size" : 4,
+									"max" : 15,
+									"min" : 0,
+									"name" : "SET_ME_X3",
+									"start-bit" : 16
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "ACC_HUD",
+					"pdus" : 
+					[
+						{
+							"id" : "0x411",
+							"length" : 8,
+							"name" : "ACC_HUD",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "FCW",
+									"start-bit" : 4
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X10",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X20",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X80",
+									"start-bit" : 48
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "BRAKE",
+					"pdus" : 
+					[
+						{
+							"id" : "0x0A6",
+							"length" : 8,
+							"name" : "BRAKE",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "BRAKE_AMOUNT",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "BRAKE_PEDAL",
+									"start-bit" : 16
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "BRAKE_MODULE",
+					"pdus" : 
+					[
+						{
+							"id" : "0x226",
+							"length" : 8,
+							"name" : "BRAKE_MODULE",
+							"signals" : 
+							[
+								{
+									"bit-size" : 9,
+									"max" : 511,
+									"min" : 0,
+									"name" : "BRAKE_POSITION",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 1,
+									"name" : "BRAKE_PRESSED",
+									"start-bit" : 37
+								},
+								{
+									"bit-size" : 9,
+									"max" : 511,
+									"min" : 0,
+									"name" : "BRAKE_PRESSURE",
+									"start-bit" : 8
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 7,
+					"name" : "BRAKE_MODULE2",
+					"pdus" : 
+					[
+						{
+							"id" : "0x230",
+							"length" : 7,
+							"name" : "BRAKE_MODULE2",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "BRAKE_PRESSED",
+									"start-bit" : 26
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 7,
+					"name" : "DSU_CRUISE",
+					"pdus" : 
+					[
+						{
+							"id" : "0x365",
+							"length" : 7,
+							"name" : "DSU_CRUISE",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "CANCEL_BTN",
+									"start-bit" : 1
+								},
+								{
+									"bit-size" : 8,
+									"factor" : 100,
+									"max" : 0,
+									"min" : 0,
+									"name" : "CRUISE_REQUEST",
+									"offset" : -12800,
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "LEAD_DISTANCE",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 1,
+									"name" : "MAIN_ON",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 1,
+									"name" : "RES_BTN",
+									"start-bit" : 3
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SET_BTN",
+									"start-bit" : 2
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SET_SPEED",
+									"start-bit" : 8
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 7,
+					"name" : "DSU_SPEED",
+					"pdus" : 
+					[
+						{
+							"id" : "0x161",
+							"length" : 7,
+							"name" : "DSU_SPEED",
+							"signals" : 
+							[
+								{
+									"bit-size" : 16,
+									"factor" : 0.00390625,
+									"max" : 255,
+									"min" : 0,
+									"name" : "FORWARD_SPEED",
+									"offset" : -30,
+									"start-bit" : -16
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "ENGINE_RPM",
+					"pdus" : 
+					[
+						{
+							"id" : "0x1C4",
+							"length" : 8,
+							"name" : "ENGINE_RPM",
+							"signals" : 
+							[
+								{
+									"bit-size" : 16,
+									"factor" : 0.78125,
+									"max" : 0,
+									"min" : 0,
+									"name" : "RPM",
+									"start-bit" : -8
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "EPS_STATUS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x262",
+							"length" : 8,
+							"name" : "EPS_STATUS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "disabled",
+											"value" : 1
+										},
+										{
+											"desc" : "enabled",
+											"value" : 3
+										},
+										{
+											"desc" : "override",
+											"value" : 5
+										}
+									],
+									"max" : 15,
+									"min" : 0,
+									"name" : "IPAS_STATE",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 7,
+									"enums" : 
+									[
+										{
+											"desc" : "standby",
+											"value" : 1
+										},
+										{
+											"desc" : "active",
+											"value" : 5
+										},
+										{
+											"desc" : "temporary_fault2",
+											"value" : 9
+										},
+										{
+											"desc" : "temporary_fault",
+											"value" : 25
+										}
+									],
+									"max" : 127,
+									"min" : 0,
+									"name" : "LKA_STATE",
+									"start-bit" : 25
+								},
+								{
+									"bit-size" : 1,
+									"name" : "TYPE",
+									"start-bit" : 24
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "ESP_CONTROL",
+					"pdus" : 
+					[
+						{
+							"id" : "0x3B7",
+							"length" : 8,
+							"name" : "ESP_CONTROL",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "BRAKE_LIGHTS_ACC",
+									"start-bit" : 18
+								},
+								{
+									"bit-size" : 1,
+									"name" : "TC_DISABLED",
+									"start-bit" : 13
+								},
+								{
+									"bit-size" : 2,
+									"max" : 1,
+									"min" : 0,
+									"name" : "VSC_DISABLED",
+									"start-bit" : 11
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 6,
+					"name" : "GAS_COMMAND",
+					"pdus" : 
+					[
+						{
+							"id" : "0x200",
+							"length" : 6,
+							"name" : "GAS_COMMAND",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM_PEDAL",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 4,
+									"max" : 15,
+									"min" : 0,
+									"name" : "COUNTER_PEDAL",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 1,
+									"name" : "ENABLE",
+									"start-bit" : 39
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.159375,
+									"max" : 1,
+									"min" : 0,
+									"name" : "GAS_COMMAND",
+									"offset" : -75.555,
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.159375,
+									"max" : 1,
+									"min" : 0,
+									"name" : "GAS_COMMAND2",
+									"offset" : -151.111,
+									"start-bit" : -24
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "GAS_PEDAL",
+					"pdus" : 
+					[
+						{
+							"id" : "0x2C1",
+							"length" : 8,
+							"name" : "GAS_PEDAL",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"factor" : 0.005,
+									"max" : 1,
+									"min" : 0,
+									"name" : "GAS_PEDAL",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 1,
+									"name" : "GAS_RELEASED",
+									"start-bit" : 3
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "GEAR_PACKET",
+					"pdus" : 
+					[
+						{
+							"id" : "0x3BC",
+							"length" : 8,
+							"name" : "GEAR_PACKET",
+							"signals" : 
+							[
+								{
+									"bit-size" : 6,
+									"enums" : 
+									[
+										{
+											"desc" : "D",
+											"value" : 0
+										},
+										{
+											"desc" : "S",
+											"value" : 1
+										},
+										{
+											"desc" : "N",
+											"value" : 8
+										},
+										{
+											"desc" : "R",
+											"value" : 16
+										},
+										{
+											"desc" : "P",
+											"value" : 32
+										}
+									],
+									"max" : 63,
+									"min" : 0,
+									"name" : "GEAR",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SPORT_ON",
+									"start-bit" : 3
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "KINEMATICS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x024",
+							"length" : 8,
+							"name" : "KINEMATICS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 10,
+									"factor" : 0.03589,
+									"max" : 65535,
+									"min" : 0,
+									"name" : "ACCEL_Y",
+									"offset" : -18.375,
+									"start-bit" : -40
+								},
+								{
+									"bit-size" : 10,
+									"max" : 65535,
+									"min" : 0,
+									"name" : "STEERING_TORQUE",
+									"offset" : -512,
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 10,
+									"factor" : 0.244,
+									"max" : 65535,
+									"min" : 0,
+									"name" : "YAW_RATE",
+									"offset" : -125,
+									"start-bit" : -8
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "LEAD_INFO",
+					"pdus" : 
+					[
+						{
+							"id" : "0x2E6",
+							"length" : 8,
+							"name" : "LEAD_INFO",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 13,
+									"factor" : 0.05,
+									"max" : 300,
+									"min" : 0,
+									"name" : "LEAD_LONG_DIST",
+									"start-bit" : 11
+								},
+								{
+									"bit-size" : 12,
+									"factor" : 0.025,
+									"max" : 100,
+									"min" : -100,
+									"name" : "LEAD_REL_SPEED",
+									"start-bit" : -28
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "LIGHT_STALK",
+					"pdus" : 
+					[
+						{
+							"id" : "0x622",
+							"length" : 8,
+							"name" : "LIGHT_STALK",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "AUTO_HIGH_BEAM",
+									"start-bit" : 37
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "LKAS_HUD",
+					"pdus" : 
+					[
+						{
+							"id" : "0x412",
+							"length" : 8,
+							"name" : "LKAS_HUD",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "ADJUSTING_CAMERA",
+									"start-bit" : 13
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "left",
+											"value" : 1
+										},
+										{
+											"desc" : "right",
+											"value" : 2
+										},
+										{
+											"desc" : "both",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "BARRIERS",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "hold",
+											"value" : 1
+										},
+										{
+											"desc" : "LDA unavailable",
+											"value" : 2
+										},
+										{
+											"desc" : "hold with continuous beep",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "LDA_ALERT",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 1,
+									"name" : "LDA_MALFUNCTION",
+									"start-bit" : 15
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "solid",
+											"value" : 1
+										},
+										{
+											"desc" : "faded",
+											"value" : 2
+										},
+										{
+											"desc" : "orange",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "LEFT_LINE",
+									"start-bit" : 4
+								},
+								{
+									"bit-size" : 1,
+									"name" : "REPEATED_BEEPS",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "solid",
+											"value" : 1
+										},
+										{
+											"desc" : "faded",
+											"value" : 2
+										},
+										{
+											"desc" : "orange",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "RIGHT_LINE",
+									"start-bit" : 2
+								},
+								{
+									"bit-size" : 2,
+									"max" : 3,
+									"min" : 0,
+									"name" : "SET_ME_X01",
+									"start-bit" : 6
+								},
+								{
+									"bit-size" : 2,
+									"max" : 3,
+									"min" : 0,
+									"name" : "SET_ME_X01_2",
+									"start-bit" : 10
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X02",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X0C",
+									"start-bit" : 16
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X2C",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X38",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 1,
+									"name" : "TWO_BEEPS",
+									"start-bit" : 12
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "PCM_CRUISE",
+					"pdus" : 
+					[
+						{
+							"id" : "0x1D2",
+							"length" : 8,
+							"name" : "PCM_CRUISE",
+							"signals" : 
+							[
+								{
+									"bit-size" : 16,
+									"factor" : 0.001,
+									"max" : 20,
+									"min" : -20,
+									"name" : "ACCEL_NET",
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 1,
+									"name" : "CANCEL_REQ",
+									"start-bit" : 49
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 1,
+									"name" : "CRUISE_ACTIVE",
+									"start-bit" : 5
+								},
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "off",
+											"value" : 1
+										},
+										{
+											"desc" : "standstill",
+											"value" : 7
+										},
+										{
+											"desc" : "active",
+											"value" : 8
+										}
+									],
+									"max" : 15,
+									"min" : 0,
+									"name" : "CRUISE_STATE",
+									"start-bit" : 52
+								},
+								{
+									"bit-size" : 1,
+									"name" : "GAS_RELEASED",
+									"start-bit" : 4
+								},
+								{
+									"bit-size" : 1,
+									"name" : "STANDSTILL_ON",
+									"start-bit" : 12
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "PCM_CRUISE_2",
+					"pdus" : 
+					[
+						{
+							"id" : "0x1D3",
+							"length" : 8,
+							"name" : "PCM_CRUISE_2",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "ok",
+											"value" : 1
+										},
+										{
+											"desc" : "low speed locked",
+											"value" : 2
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "LOW_SPEED_LOCKOUT",
+									"start-bit" : 13
+								},
+								{
+									"bit-size" : 1,
+									"name" : "MAIN_ON",
+									"start-bit" : 15
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SET_SPEED",
+									"start-bit" : 16
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "PCM_CRUISE_SM",
+					"pdus" : 
+					[
+						{
+							"id" : "0x399",
+							"length" : 8,
+							"name" : "PCM_CRUISE_SM",
+							"signals" : 
+							[
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "disabled",
+											"value" : 2
+										},
+										{
+											"desc" : "faulted",
+											"value" : 5
+										},
+										{
+											"desc" : "enabled",
+											"value" : 6
+										},
+										{
+											"desc" : "hold_waiting_user_cmd",
+											"value" : 10
+										},
+										{
+											"desc" : "hold",
+											"value" : 11
+										}
+									],
+									"max" : 15,
+									"min" : 0,
+									"name" : "CRUISE_CONTROL_STATE",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 2,
+									"max" : 3,
+									"min" : 0,
+									"name" : "DISTANCE_LINES",
+									"start-bit" : 13
+								},
+								{
+									"bit-size" : 1,
+									"name" : "MAIN_ON",
+									"start-bit" : 4
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "UI_SET_SPEED",
+									"start-bit" : 24
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 7,
+					"name" : "PRE_COLLISION",
+					"pdus" : 
+					[
+						{
+							"id" : "0x283",
+							"length" : 7,
+							"name" : "PRE_COLLISION",
+							"signals" : 
+							[
+								{
+									"bit-size" : 3,
+									"max" : 255,
+									"min" : 0,
+									"name" : "BRAKE_STATUS",
+									"start-bit" : 37
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "COUNTER",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 2,
+									"max" : 255,
+									"min" : 0,
+									"name" : "FORCE",
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 1,
+									"name" : "PRECOLLISION_ACTIVE",
+									"start-bit" : 41
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SET_ME_X00",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 8,
+									"max" : 3,
+									"min" : 0,
+									"name" : "SET_ME_X002",
+									"start-bit" : 42
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SET_ME_X003",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 3,
+									"enums" : 
+									[
+										{
+											"desc" : "normal",
+											"value" : 0
+										},
+										{
+											"desc" : "adaptive_cruise_control",
+											"value" : 1
+										},
+										{
+											"desc" : "emergency_braking",
+											"value" : 3
+										}
+									],
+									"max" : 255,
+									"min" : 0,
+									"name" : "STATE",
+									"start-bit" : 34
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "PRE_COLLISION_2",
+					"pdus" : 
+					[
+						{
+							"id" : "0x344",
+							"length" : 8,
+							"name" : "PRE_COLLISION_2",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "RSA1",
+					"pdus" : 
+					[
+						{
+							"id" : "0x489",
+							"length" : 8,
+							"name" : "RSA1",
+							"signals" : 
+							[
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "BZRRQ_A",
+									"start-bit" : 60
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "BZRRQ_P",
+									"start-bit" : 62
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SPDVAL1",
+									"start-bit" : 16
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SPDVAL2",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SPLSGN1",
+									"start-bit" : 28
+								},
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "wet road",
+											"value" : 4
+										},
+										{
+											"desc" : "rain",
+											"value" : 5
+										},
+										{
+											"desc" : "conditional blank",
+											"value" : 15
+										}
+									],
+									"max" : 0,
+									"min" : 0,
+									"name" : "SPLSGN2",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SYNCID1",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 8,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "speed sign",
+											"value" : 1
+										}
+									],
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGN1",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 8,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "speed sign",
+											"value" : 1
+										}
+									],
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGN2",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 3,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNGRY1",
+									"start-bit" : 10
+								},
+								{
+									"bit-size" : 3,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNGRY2",
+									"start-bit" : 42
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNHLT1",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNHLT2",
+									"start-bit" : 40
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "RSA2",
+					"pdus" : 
+					[
+						{
+							"id" : "0x48A",
+							"length" : 8,
+							"name" : "RSA2",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "DPSGNREQ",
+									"start-bit" : 54
+								},
+								{
+									"bit-size" : 3,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SGNNUMA",
+									"start-bit" : 48
+								},
+								{
+										"bit-size" : 3,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SGNNUMP",
+									"start-bit" : 51
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SPDUNT",
+									"start-bit" : 62
+								},
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "wet road",
+											"value" : 4
+										},
+										{
+											"desc" : "rain",
+											"value" : 5
+										},
+										{
+											"desc" : "conditional blank",
+											"value" : 15
+										}
+									],
+									"max" : 0,
+									"min" : 0,
+									"name" : "SPLSGN3",
+									"start-bit" : 28
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SPLSGN4",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SYNCID2",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 8,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "speed sign",
+											"value" : 1
+										},
+										{
+											"desc" : "0 unlimited",
+											"value" : 2
+										},
+										{
+											"desc" : "unlimited",
+											"value" : 7
+										},
+										{
+											"desc" : "highway",
+											"value" : 16
+										},
+										{
+											"desc" : "no highway",
+											"value" : 17
+										},
+										{
+											"desc" : "motorway",
+											"value" : 18
+										},
+										{
+											"desc" : "no motorway",
+											"value" : 19
+										},
+										{
+											"desc" : "in city",
+											"value" : 20
+										},
+										{
+											"desc" : "outside city",
+											"value" : 21
+										},
+										{
+											"desc" : "pedestrian area",
+											"value" : 22
+										},
+										{
+											"desc" : "no pedestrian area",
+											"value" : 23
+										},
+										{
+											"desc" : "no overtaking left",
+											"value" : 65
+										},
+										{
+											"desc" : "no overtaking right",
+											"value" : 66
+										},
+										{
+											"desc" : "overtaking allowed again",
+											"value" : 67
+										},
+										{
+											"desc" : "no entry",
+											"value" : 129
+										}
+									],
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGN3",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGN4",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 3,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNGRY3",
+									"start-bit" : 10
+								},
+								{
+									"bit-size" : 3,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNGRY4",
+									"start-bit" : 42
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNHLT3",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNHLT4",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSRWMSG",
+									"start-bit" : 60
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "RSA3",
+					"pdus" : 
+					[
+						{
+							"id" : "0x48B",
+							"length" : 8,
+							"name" : "RSA3",
+							"signals" : 
+							[
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "NTLVLSPD",
+									"start-bit" : 2
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "OTSGNNTM",
+									"start-bit" : 4
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "OVSPNTM",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "OVSPVALH",
+									"offset" : -5,
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "OVSPVALL",
+									"offset" : -5,
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "OVSPVALM",
+									"offset" : -5,
+									"start-bit" : -16
+								},
+								{
+									"bit-size" : 1,
+									"name" : "TSREQPD",
+									"start-bit" : 7
+								},
+								{
+									"bit-size" : 1,
+									"name" : "TSRMSW",
+									"start-bit" : 6
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSRSPU",
+									"start-bit" : 32
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "SEATS_DOORS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x620",
+							"length" : 8,
+							"name" : "SEATS_DOORS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "DOOR_OPEN_FL",
+									"start-bit" : 45
+								},
+								{
+									"bit-size" : 1,
+									"name" : "DOOR_OPEN_FR",
+									"start-bit" : 44
+								},
+								{
+									"bit-size" : 1,
+									"name" : "DOOR_OPEN_RL",
+									"start-bit" : 42
+								},
+								{
+									"bit-size" : 1,
+									"name" : "DOOR_OPEN_RR",
+									"start-bit" : 43
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SEATBELT_DRIVER_UNLATCHED",
+									"start-bit" : 62
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "SPEED",
+					"pdus" : 
+					[
+						{
+							"id" : "0x0B4",
+							"length" : 8,
+							"name" : "SPEED",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "ENCODER",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "SPEED",
+									"start-bit" : 48
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 500,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "STEERING_IPAS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x266",
+							"length" : 8,
+							"name" : "STEERING_IPAS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 12,
+									"factor" : 1.5,
+									"max" : 510,
+									"min" : -510,
+									"name" : "ANGLE",
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "left",
+											"value" : 1
+										},
+										{
+											"desc" : "center",
+											"value" : 2
+										},
+										{
+											"desc" : "right",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "DIRECTION_CMD",
+									"start-bit" : 37
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SET_ME_X00",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SET_ME_X00_1",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SET_ME_X10",
+									"start-bit" : 16
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SET_ME_X40",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "disabled",
+											"value" : 1
+										},
+										{
+											"desc" : "enabled",
+											"value" : 3
+										}
+									],
+									"max" : 15,
+									"min" : 0,
+									"name" : "STATE",
+									"start-bit" : 4
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "STEERING_LEVERS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x614",
+							"length" : 8,
+							"name" : "STEERING_LEVERS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "left",
+											"value" : 1
+										},
+										{
+											"desc" : "right",
+											"value" : 2
+										},
+										{
+											"desc" : "none",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "TURN_SIGNALS",
+									"start-bit" : 28
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 5,
+					"name" : "STEERING_LKA",
+					"pdus" : 
+					[
+						{
+							"id" : "0x2E4",
+							"length" : 5,
+							"name" : "STEERING_LKA",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 6,
+									"max" : 63,
+									"min" : 0,
+									"name" : "COUNTER",
+									"start-bit" : 1
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "LKA_STATE",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SET_ME_1",
+									"start-bit" : 7
+								},
+								{
+									"bit-size" : 1,
+									"name" : "STEER_REQUEST",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 16,
+									"max" : 65535,
+									"min" : 0,
+									"name" : "STEER_TORQUE_CMD",
+									"start-bit" : -16
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "STEERING_LTA",
+					"pdus" : 
+					[
+						{
+							"id" : "0x191",
+							"length" : 8,
+							"name" : "STEERING_LTA",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"factor" : 0.5,
+									"max" : 255,
+									"min" : 0,
+									"name" : "ANGLE",
+									"start-bit" : -48
+								},
+								{
+									"bit-size" : 1,
+									"name" : "BIT",
+									"start-bit" : 30
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 6,
+									"max" : 255,
+									"min" : 0,
+									"name" : "COUNTER",
+									"start-bit" : 1
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "PERCENTAGE",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SETME_X1",
+									"start-bit" : 7
+								},
+								{
+									"bit-size" : 2,
+									"max" : 3,
+									"min" : 0,
+									"name" : "SETME_X3",
+									"start-bit" : 28
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SETME_X64",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.0573,
+									"max" : 540,
+									"min" : -540,
+									"name" : "STEER_ANGLE_CMD",
+									"start-bit" : -16
+								},
+								{
+									"bit-size" : 1,
+									"name" : "STEER_REQUEST",
+									"start-bit" : 25
+								},
+								{
+									"bit-size" : 1,
+									"name" : "STEER_REQUEST_2",
+									"start-bit" : 0
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "STEER_ANGLE_SENSOR",
+					"pdus" : 
+					[
+						{
+							"id" : "0x025",
+							"length" : 8,
+							"name" : "STEER_ANGLE_SENSOR",
+							"signals" : 
+							[
+								{
+									"bit-size" : 12,
+									"factor" : 1.5,
+									"max" : 500,
+									"min" : -500,
+									"name" : "STEER_ANGLE",
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 4,
+									"factor" : 0.1,
+									"max" : 0.7,
+									"min" : -0.7,
+									"name" : "STEER_FRACTION",
+									"start-bit" : -36
+								},
+								{
+									"bit-size" : 12,
+									"max" : 2000,
+									"min" : -2000,
+									"name" : "STEER_RATE",
+									"start-bit" : -40
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "STEER_TORQUE_SENSOR",
+					"pdus" : 
+					[
+						{
+							"id" : "0x260",
+							"length" : 8,
+							"name" : "STEER_TORQUE_SENSOR",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.0573,
+									"max" : 500,
+									"min" : -500,
+									"name" : "STEER_ANGLE",
+									"start-bit" : -32
+								},
+								{
+									"bit-size" : 1,
+									"name" : "STEER_OVERRIDE",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 16,
+									"max" : 32767,
+									"min" : -32768,
+									"name" : "STEER_TORQUE_DRIVER",
+									"start-bit" : -16
+								},
+								{
+									"bit-size" : 16,
+									"max" : 20000,
+									"min" : -20000,
+									"name" : "STEER_TORQUE_EPS",
+									"start-bit" : -48
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "UI_SETTING",
+					"pdus" : 
+					[
+						{
+							"id" : "0x611",
+							"length" : 8,
+							"name" : "UI_SETTING",
+							"signals" : 
+							[
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "km",
+											"value" : 1
+										},
+										{
+											"desc" : "miles",
+											"value" : 2
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "UNITS",
+									"start-bit" : 25
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "WHEEL_SPEEDS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x0AA",
+							"length" : 8,
+							"name" : "WHEEL_SPEEDS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "WHEEL_SPEED_FL",
+									"offset" : -67.67,
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "WHEEL_SPEED_FR",
+									"offset" : -67.67,
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "WHEEL_SPEED_RL",
+									"offset" : -67.67,
+									"start-bit" : -56
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "WHEEL_SPEED_RR",
+									"offset" : -67.67,
+									"start-bit" : -40
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				}
+			],
+			"name" : "ADAS"
+		},
+		{
+			"frames" : 
+			[
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "ACCELEROMETER",
+					"pdus" : 
+					[
+						{
+							"id" : "0x228",
+							"length" : 8,
+							"name" : "ACCELEROMETER",
+							"signals" : 
+							[
+								{
+									"bit-size" : 15,
+									"factor" : 0.001,
+									"max" : 20,
+									"min" : -20,
+									"name" : "ACCEL_X",
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 15,
+									"max" : 32767,
+									"min" : 0,
+									"name" : "ACCEL_Z",
+									"start-bit" : -24
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "ACC_CONTROL",
+					"pdus" : 
+					[
+						{
+							"id" : "0x343",
+							"length" : 8,
+							"name" : "ACC_CONTROL",
+							"signals" : 
+							[
+								{
+									"bit-size" : 16,
+									"factor" : 0.001,
+									"max" : 20,
+									"min" : -20,
+									"name" : "ACCEL_CMD",
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 8,
+									"factor" : 0.05,
+									"max" : 0,
+									"min" : 0,
+									"name" : "ACCEL_CMD_ALT",
+									"start-bit" : -40
+								},
+								{
+									"bit-size" : 1,
+									"name" : "CANCEL_REQ",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 1,
+									"name" : "DISTANCE",
+									"start-bit" : 20
+								},
+								{
+									"bit-size" : 1,
+									"name" : "MINI_CAR",
+									"start-bit" : 21
+								},
+								{
+									"bit-size" : 1,
+									"name" : "PERMIT_BRAKING",
+									"start-bit" : 30
+								},
+								{
+									"bit-size" : 1,
+									"name" : "RELEASE_STANDSTILL",
+									"start-bit" : 31
+								},
+								{
+									"bit-size" : 2,
+									"max" : 3,
+									"min" : 0,
+									"name" : "SET_ME_X01",
+									"start-bit" : 22
+								},
+								{
+									"bit-size" : 4,
+									"max" : 15,
+									"min" : 0,
+									"name" : "SET_ME_X3",
+									"start-bit" : 16
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "ACC_HUD",
+					"pdus" : 
+					[
+						{
+							"id" : "0x411",
+							"length" : 8,
+							"name" : "ACC_HUD",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "FCW",
+									"start-bit" : 4
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X10",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X20",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X80",
+									"start-bit" : 48
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "BRAKE",
+					"pdus" : 
+					[
+						{
+							"id" : "0x0A6",
+							"length" : 8,
+							"name" : "BRAKE",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "BRAKE_AMOUNT",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "BRAKE_PEDAL",
+									"start-bit" : 16
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "BRAKE_MODULE",
+					"pdus" : 
+					[
+						{
+							"id" : "0x226",
+							"length" : 8,
+							"name" : "BRAKE_MODULE",
+							"signals" : 
+							[
+								{
+									"bit-size" : 9,
+									"max" : 511,
+									"min" : 0,
+									"name" : "BRAKE_POSITION",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 1,
+									"name" : "BRAKE_PRESSED",
+									"start-bit" : 37
+								},
+								{
+									"bit-size" : 9,
+									"max" : 511,
+									"min" : 0,
+									"name" : "BRAKE_PRESSURE",
+									"start-bit" : 8
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 7,
+					"name" : "BRAKE_MODULE2",
+					"pdus" : 
+					[
+						{
+							"id" : "0x230",
+							"length" : 7,
+							"name" : "BRAKE_MODULE2",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "BRAKE_PRESSED",
+									"start-bit" : 26
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 7,
+					"name" : "DSU_CRUISE",
+					"pdus" : 
+					[
+						{
+							"id" : "0x365",
+							"length" : 7,
+							"name" : "DSU_CRUISE",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "CANCEL_BTN",
+									"start-bit" : 1
+								},
+								{
+									"bit-size" : 8,
+									"factor" : 100,
+									"max" : 0,
+									"min" : 0,
+									"name" : "CRUISE_REQUEST",
+									"offset" : -12800,
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "LEAD_DISTANCE",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 1,
+									"name" : "MAIN_ON",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 1,
+									"name" : "RES_BTN",
+									"start-bit" : 3
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SET_BTN",
+									"start-bit" : 2
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SET_SPEED",
+									"start-bit" : 8
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 7,
+					"name" : "DSU_SPEED",
+					"pdus" : 
+					[
+						{
+							"id" : "0x161",
+							"length" : 7,
+							"name" : "DSU_SPEED",
+							"signals" : 
+							[
+								{
+									"bit-size" : 16,
+									"factor" : 0.00390625,
+									"max" : 255,
+									"min" : 0,
+									"name" : "FORWARD_SPEED",
+									"offset" : -30,
+									"start-bit" : -16
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "ENGINE_RPM",
+					"pdus" : 
+					[
+						{
+							"id" : "0x1C4",
+							"length" : 8,
+							"name" : "ENGINE_RPM",
+							"signals" : 
+							[
+								{
+									"bit-size" : 16,
+									"factor" : 0.78125,
+									"max" : 0,
+									"min" : 0,
+									"name" : "RPM",
+									"start-bit" : -8
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "EPS_STATUS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x262",
+							"length" : 8,
+							"name" : "EPS_STATUS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "disabled",
+											"value" : 1
+										},
+										{
+											"desc" : "enabled",
+											"value" : 3
+										},
+										{
+											"desc" : "override",
+											"value" : 5
+										}
+									],
+									"max" : 15,
+									"min" : 0,
+									"name" : "IPAS_STATE",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 7,
+									"enums" : 
+									[
+										{
+											"desc" : "standby",
+											"value" : 1
+										},
+										{
+											"desc" : "active",
+											"value" : 5
+										},
+										{
+											"desc" : "temporary_fault2",
+											"value" : 9
+										},
+										{
+											"desc" : "temporary_fault",
+											"value" : 25
+										}
+									],
+									"max" : 127,
+									"min" : 0,
+									"name" : "LKA_STATE",
+									"start-bit" : 25
+								},
+								{
+									"bit-size" : 1,
+									"name" : "TYPE",
+									"start-bit" : 24
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "ESP_CONTROL",
+					"pdus" : 
+					[
+						{
+							"id" : "0x3B7",
+							"length" : 8,
+							"name" : "ESP_CONTROL",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "BRAKE_LIGHTS_ACC",
+									"start-bit" : 18
+								},
+								{
+									"bit-size" : 1,
+									"name" : "TC_DISABLED",
+									"start-bit" : 13
+								},
+								{
+									"bit-size" : 2,
+									"max" : 1,
+									"min" : 0,
+									"name" : "VSC_DISABLED",
+									"start-bit" : 11
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 6,
+					"name" : "GAS_COMMAND",
+					"pdus" : 
+					[
+						{
+							"id" : "0x200",
+							"length" : 6,
+							"name" : "GAS_COMMAND",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM_PEDAL",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 4,
+									"max" : 15,
+									"min" : 0,
+									"name" : "COUNTER_PEDAL",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 1,
+									"name" : "ENABLE",
+									"start-bit" : 39
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.159375,
+									"max" : 1,
+									"min" : 0,
+									"name" : "GAS_COMMAND",
+									"offset" : -75.555,
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.159375,
+									"max" : 1,
+									"min" : 0,
+									"name" : "GAS_COMMAND2",
+									"offset" : -151.111,
+									"start-bit" : -24
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "GAS_PEDAL",
+					"pdus" : 
+					[
+						{
+							"id" : "0x2C1",
+							"length" : 8,
+							"name" : "GAS_PEDAL",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"factor" : 0.005,
+									"max" : 1,
+									"min" : 0,
+									"name" : "GAS_PEDAL",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 1,
+									"name" : "GAS_RELEASED",
+									"start-bit" : 3
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "GEAR_PACKET",
+					"pdus" : 
+					[
+						{
+							"id" : "0x3BC",
+							"length" : 8,
+							"name" : "GEAR_PACKET",
+							"signals" : 
+							[
+								{
+									"bit-size" : 6,
+									"enums" : 
+									[
+										{
+											"desc" : "D",
+											"value" : 0
+										},
+										{
+											"desc" : "S",
+											"value" : 1
+										},
+										{
+											"desc" : "N",
+											"value" : 8
+										},
+										{
+											"desc" : "R",
+											"value" : 16
+										},
+										{
+											"desc" : "P",
+											"value" : 32
+										}
+									],
+									"max" : 63,
+									"min" : 0,
+									"name" : "GEAR",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SPORT_ON",
+									"start-bit" : 3
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "KINEMATICS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x024",
+							"length" : 8,
+							"name" : "KINEMATICS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 10,
+									"factor" : 0.03589,
+									"max" : 65535,
+									"min" : 0,
+									"name" : "ACCEL_Y",
+									"offset" : -18.375,
+									"start-bit" : -40
+								},
+								{
+									"bit-size" : 10,
+									"max" : 65535,
+									"min" : 0,
+									"name" : "STEERING_TORQUE",
+									"offset" : -512,
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 10,
+									"factor" : 0.244,
+									"max" : 65535,
+									"min" : 0,
+									"name" : "YAW_RATE",
+									"offset" : -125,
+									"start-bit" : -8
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "LEAD_INFO",
+					"pdus" : 
+					[
+						{
+							"id" : "0x2E6",
+							"length" : 8,
+							"name" : "LEAD_INFO",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 13,
+									"factor" : 0.05,
+									"max" : 300,
+									"min" : 0,
+									"name" : "LEAD_LONG_DIST",
+									"start-bit" : 11
+								},
+								{
+									"bit-size" : 12,
+									"factor" : 0.025,
+									"max" : 100,
+									"min" : -100,
+									"name" : "LEAD_REL_SPEED",
+									"start-bit" : -28
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "LIGHT_STALK",
+					"pdus" : 
+					[
+						{
+							"id" : "0x622",
+							"length" : 8,
+							"name" : "LIGHT_STALK",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "AUTO_HIGH_BEAM",
+									"start-bit" : 37
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "LKAS_HUD",
+					"pdus" : 
+					[
+						{
+							"id" : "0x412",
+							"length" : 8,
+							"name" : "LKAS_HUD",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "ADJUSTING_CAMERA",
+									"start-bit" : 13
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "left",
+											"value" : 1
+										},
+										{
+											"desc" : "right",
+											"value" : 2
+										},
+										{
+											"desc" : "both",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "BARRIERS",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "hold",
+											"value" : 1
+										},
+										{
+											"desc" : "LDA unavailable",
+											"value" : 2
+										},
+										{
+											"desc" : "hold with continuous beep",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "LDA_ALERT",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 1,
+									"name" : "LDA_MALFUNCTION",
+									"start-bit" : 15
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "solid",
+											"value" : 1
+										},
+										{
+											"desc" : "faded",
+											"value" : 2
+										},
+										{
+											"desc" : "orange",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "LEFT_LINE",
+									"start-bit" : 4
+								},
+								{
+									"bit-size" : 1,
+									"name" : "REPEATED_BEEPS",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "solid",
+											"value" : 1
+										},
+										{
+											"desc" : "faded",
+											"value" : 2
+										},
+										{
+											"desc" : "orange",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "RIGHT_LINE",
+									"start-bit" : 2
+								},
+								{
+									"bit-size" : 2,
+									"max" : 3,
+									"min" : 0,
+									"name" : "SET_ME_X01",
+									"start-bit" : 6
+								},
+								{
+									"bit-size" : 2,
+									"max" : 3,
+									"min" : 0,
+									"name" : "SET_ME_X01_2",
+									"start-bit" : 10
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X02",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X0C",
+									"start-bit" : 16
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X2C",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X38",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 1,
+									"name" : "TWO_BEEPS",
+									"start-bit" : 12
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "PCM_CRUISE",
+					"pdus" : 
+					[
+						{
+							"id" : "0x1D2",
+							"length" : 8,
+							"name" : "PCM_CRUISE",
+							"signals" : 
+							[
+								{
+									"bit-size" : 16,
+									"factor" : 0.001,
+									"max" : 20,
+									"min" : -20,
+									"name" : "ACCEL_NET",
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 1,
+									"name" : "CANCEL_REQ",
+									"start-bit" : 49
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 1,
+									"name" : "CRUISE_ACTIVE",
+									"start-bit" : 5
+								},
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "off",
+											"value" : 1
+										},
+										{
+											"desc" : "standstill",
+											"value" : 7
+										},
+										{
+											"desc" : "active",
+											"value" : 8
+										}
+									],
+									"max" : 15,
+									"min" : 0,
+									"name" : "CRUISE_STATE",
+									"start-bit" : 52
+								},
+								{
+									"bit-size" : 1,
+									"name" : "GAS_RELEASED",
+									"start-bit" : 4
+								},
+								{
+									"bit-size" : 1,
+									"name" : "STANDSTILL_ON",
+									"start-bit" : 12
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "PCM_CRUISE_2",
+					"pdus" : 
+					[
+						{
+							"id" : "0x1D3",
+							"length" : 8,
+							"name" : "PCM_CRUISE_2",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "ok",
+											"value" : 1
+										},
+										{
+											"desc" : "low speed locked",
+											"value" : 2
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "LOW_SPEED_LOCKOUT",
+									"start-bit" : 13
+								},
+								{
+									"bit-size" : 1,
+									"name" : "MAIN_ON",
+									"start-bit" : 15
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SET_SPEED",
+									"start-bit" : 16
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "PCM_CRUISE_SM",
+					"pdus" : 
+					[
+						{
+							"id" : "0x399",
+							"length" : 8,
+							"name" : "PCM_CRUISE_SM",
+							"signals" : 
+							[
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "disabled",
+											"value" : 2
+										},
+										{
+											"desc" : "faulted",
+											"value" : 5
+										},
+										{
+											"desc" : "enabled",
+											"value" : 6
+										},
+										{
+											"desc" : "hold_waiting_user_cmd",
+											"value" : 10
+										},
+										{
+											"desc" : "hold",
+											"value" : 11
+										}
+									],
+									"max" : 15,
+									"min" : 0,
+									"name" : "CRUISE_CONTROL_STATE",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 2,
+									"max" : 3,
+									"min" : 0,
+									"name" : "DISTANCE_LINES",
+									"start-bit" : 13
+								},
+								{
+									"bit-size" : 1,
+									"name" : "MAIN_ON",
+									"start-bit" : 4
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "UI_SET_SPEED",
+									"start-bit" : 24
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 7,
+					"name" : "PRE_COLLISION",
+					"pdus" : 
+					[
+						{
+							"id" : "0x283",
+							"length" : 7,
+							"name" : "PRE_COLLISION",
+							"signals" : 
+							[
+								{
+									"bit-size" : 3,
+									"max" : 255,
+									"min" : 0,
+									"name" : "BRAKE_STATUS",
+									"start-bit" : 37
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "COUNTER",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 2,
+									"max" : 255,
+									"min" : 0,
+									"name" : "FORCE",
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 1,
+									"name" : "PRECOLLISION_ACTIVE",
+									"start-bit" : 41
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SET_ME_X00",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 8,
+									"max" : 3,
+									"min" : 0,
+									"name" : "SET_ME_X002",
+									"start-bit" : 42
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SET_ME_X003",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 3,
+									"enums" : 
+									[
+										{
+											"desc" : "normal",
+											"value" : 0
+										},
+										{
+											"desc" : "adaptive_cruise_control",
+											"value" : 1
+										},
+										{
+											"desc" : "emergency_braking",
+											"value" : 3
+										}
+									],
+									"max" : 255,
+									"min" : 0,
+									"name" : "STATE",
+									"start-bit" : 34
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "PRE_COLLISION_2",
+					"pdus" : 
+					[
+						{
+							"id" : "0x344",
+							"length" : 8,
+							"name" : "PRE_COLLISION_2",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "RSA1",
+					"pdus" : 
+					[
+						{
+							"id" : "0x489",
+							"length" : 8,
+							"name" : "RSA1",
+							"signals" : 
+							[
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "BZRRQ_A",
+									"start-bit" : 60
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "BZRRQ_P",
+									"start-bit" : 62
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SPDVAL1",
+									"start-bit" : 16
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SPDVAL2",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SPLSGN1",
+									"start-bit" : 28
+								},
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "wet road",
+											"value" : 4
+										},
+										{
+											"desc" : "rain",
+											"value" : 5
+										},
+										{
+											"desc" : "conditional blank",
+											"value" : 15
+										}
+									],
+									"max" : 0,
+									"min" : 0,
+									"name" : "SPLSGN2",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SYNCID1",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 8,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "speed sign",
+											"value" : 1
+										}
+									],
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGN1",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 8,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "speed sign",
+											"value" : 1
+										}
+									],
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGN2",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 3,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNGRY1",
+									"start-bit" : 10
+								},
+								{
+									"bit-size" : 3,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNGRY2",
+									"start-bit" : 42
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNHLT1",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNHLT2",
+									"start-bit" : 40
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "RSA2",
+					"pdus" : 
+					[
+						{
+							"id" : "0x48A",
+							"length" : 8,
+							"name" : "RSA2",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "DPSGNREQ",
+									"start-bit" : 54
+								},
+								{
+									"bit-size" : 3,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SGNNUMA",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 3,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SGNNUMP",
+									"start-bit" : 51
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SPDUNT",
+									"start-bit" : 62
+								},
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "wet road",
+											"value" : 4
+										},
+										{
+											"desc" : "rain",
+											"value" : 5
+										},
+										{
+											"desc" : "conditional blank",
+											"value" : 15
+										}
+									],
+									"max" : 0,
+									"min" : 0,
+									"name" : "SPLSGN3",
+									"start-bit" : 28
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SPLSGN4",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SYNCID2",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 8,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "speed sign",
+											"value" : 1
+										},
+										{
+											"desc" : "0 unlimited",
+											"value" : 2
+										},
+										{
+											"desc" : "unlimited",
+											"value" : 7
+										},
+										{
+											"desc" : "highway",
+											"value" : 16
+										},
+										{
+											"desc" : "no highway",
+											"value" : 17
+										},
+										{
+											"desc" : "motorway",
+											"value" : 18
+										},
+										{
+											"desc" : "no motorway",
+											"value" : 19
+										},
+										{
+											"desc" : "in city",
+											"value" : 20
+										},
+										{
+											"desc" : "outside city",
+											"value" : 21
+										},
+										{
+											"desc" : "pedestrian area",
+											"value" : 22
+										},
+										{
+											"desc" : "no pedestrian area",
+											"value" : 23
+										},
+										{
+											"desc" : "no overtaking left",
+											"value" : 65
+										},
+										{
+											"desc" : "no overtaking right",
+											"value" : 66
+										},
+										{
+											"desc" : "overtaking allowed again",
+											"value" : 67
+										},
+										{
+											"desc" : "no entry",
+											"value" : 129
+										}
+									],
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGN3",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGN4",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 3,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNGRY3",
+									"start-bit" : 10
+								},
+								{
+									"bit-size" : 3,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNGRY4",
+									"start-bit" : 42
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNHLT3",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSGNHLT4",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSRWMSG",
+									"start-bit" : 60
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "RSA3",
+					"pdus" : 
+					[
+						{
+							"id" : "0x48B",
+							"length" : 8,
+							"name" : "RSA3",
+							"signals" : 
+							[
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "NTLVLSPD",
+									"start-bit" : 2
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "OTSGNNTM",
+									"start-bit" : 4
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "OVSPNTM",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "OVSPVALH",
+									"offset" : -5,
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "OVSPVALL",
+									"offset" : -5,
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "OVSPVALM",
+									"offset" : -5,
+									"start-bit" : -16
+								},
+								{
+									"bit-size" : 1,
+									"name" : "TSREQPD",
+									"start-bit" : 7
+								},
+								{
+									"bit-size" : 1,
+									"name" : "TSRMSW",
+									"start-bit" : 6
+								},
+								{
+									"bit-size" : 2,
+									"max" : 0,
+									"min" : 0,
+									"name" : "TSRSPU",
+									"start-bit" : 32
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "SEATS_DOORS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x620",
+							"length" : 8,
+							"name" : "SEATS_DOORS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "DOOR_OPEN_FL",
+									"start-bit" : 45
+								},
+								{
+									"bit-size" : 1,
+									"name" : "DOOR_OPEN_FR",
+									"start-bit" : 44
+								},
+								{
+									"bit-size" : 1,
+									"name" : "DOOR_OPEN_RL",
+									"start-bit" : 42
+								},
+								{
+									"bit-size" : 1,
+									"name" : "DOOR_OPEN_RR",
+									"start-bit" : 43
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SEATBELT_DRIVER_UNLATCHED",
+									"start-bit" : 62
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "SPEED",
+					"pdus" : 
+					[
+						{
+							"id" : "0x0B4",
+							"length" : 8,
+							"name" : "SPEED",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "ENCODER",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "SPEED",
+									"start-bit" : 48
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "STEERING_IPAS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x266",
+							"length" : 8,
+							"name" : "STEERING_IPAS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 12,
+									"factor" : 1.5,
+									"max" : 510,
+									"min" : -510,
+									"name" : "ANGLE",
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "left",
+											"value" : 1
+										},
+										{
+											"desc" : "center",
+											"value" : 2
+										},
+										{
+											"desc" : "right",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "DIRECTION_CMD",
+									"start-bit" : 37
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SET_ME_X00",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SET_ME_X00_1",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SET_ME_X10",
+									"start-bit" : 16
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SET_ME_X40",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "disabled",
+											"value" : 1
+										},
+										{
+											"desc" : "enabled",
+											"value" : 3
+										}
+									],
+									"max" : 15,
+									"min" : 0,
+									"name" : "STATE",
+									"start-bit" : 4
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "STEERING_LEVERS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x614",
+							"length" : 8,
+							"name" : "STEERING_LEVERS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "left",
+											"value" : 1
+										},
+										{
+											"desc" : "right",
+											"value" : 2
+										},
+										{
+											"desc" : "none",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "TURN_SIGNALS",
+									"start-bit" : 28
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 5,
+					"name" : "STEERING_LKA",
+					"pdus" : 
+					[
+						{
+							"id" : "0x2E4",
+							"length" : 5,
+							"name" : "STEERING_LKA",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 6,
+									"max" : 63,
+									"min" : 0,
+									"name" : "COUNTER",
+									"start-bit" : 1
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "LKA_STATE",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SET_ME_1",
+									"start-bit" : 7
+								},
+								{
+									"bit-size" : 1,
+									"name" : "STEER_REQUEST",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 16,
+									"max" : 65535,
+									"min" : 0,
+									"name" : "STEER_TORQUE_CMD",
+									"start-bit" : -16
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "STEERING_LTA",
+					"pdus" : 
+					[
+						{
+							"id" : "0x191",
+							"length" : 8,
+							"name" : "STEERING_LTA",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"factor" : 0.5,
+									"max" : 255,
+									"min" : 0,
+									"name" : "ANGLE",
+									"start-bit" : -48
+								},
+								{
+									"bit-size" : 1,
+									"name" : "BIT",
+									"start-bit" : 30
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 6,
+									"max" : 255,
+									"min" : 0,
+									"name" : "COUNTER",
+									"start-bit" : 1
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "PERCENTAGE",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SETME_X1",
+									"start-bit" : 7
+								},
+								{
+									"bit-size" : 2,
+									"max" : 3,
+									"min" : 0,
+									"name" : "SETME_X3",
+									"start-bit" : 28
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SETME_X64",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.0573,
+									"max" : 540,
+									"min" : -540,
+									"name" : "STEER_ANGLE_CMD",
+									"start-bit" : -16
+								},
+								{
+									"bit-size" : 1,
+									"name" : "STEER_REQUEST",
+									"start-bit" : 25
+								},
+								{
+									"bit-size" : 1,
+									"name" : "STEER_REQUEST_2",
+									"start-bit" : 0
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "STEER_ANGLE_SENSOR",
+					"pdus" : 
+					[
+						{
+							"id" : "0x025",
+							"length" : 8,
+							"name" : "STEER_ANGLE_SENSOR",
+							"signals" : 
+							[
+								{
+									"bit-size" : 12,
+									"factor" : 1.5,
+									"max" : 500,
+									"min" : -500,
+									"name" : "STEER_ANGLE",
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 4,
+									"factor" : 0.1,
+									"max" : 0.7,
+									"min" : -0.7,
+									"name" : "STEER_FRACTION",
+									"start-bit" : -36
+								},
+								{
+									"bit-size" : 12,
+									"max" : 2000,
+									"min" : -2000,
+									"name" : "STEER_RATE",
+									"start-bit" : -40
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "STEER_TORQUE_SENSOR",
+					"pdus" : 
+					[
+						{
+							"id" : "0x260",
+							"length" : 8,
+							"name" : "STEER_TORQUE_SENSOR",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.0573,
+									"max" : 500,
+									"min" : -500,
+									"name" : "STEER_ANGLE",
+									"start-bit" : -32
+								},
+								{
+									"bit-size" : 1,
+									"name" : "STEER_OVERRIDE",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 16,
+									"max" : 32767,
+									"min" : -32768,
+									"name" : "STEER_TORQUE_DRIVER",
+									"start-bit" : -16
+								},
+								{
+									"bit-size" : 16,
+									"max" : 20000,
+									"min" : -20000,
+									"name" : "STEER_TORQUE_EPS",
+									"start-bit" : -48
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "TIME",
+					"pdus" : 
+					[
+						{
+							"id" : "0x413",
+							"length" : 8,
+							"name" : "TIME",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "DAY",
+									"start-bit" : 16
+								},
+								{
+									"bit-size" : 4,
+									"max" : 0,
+									"min" : 0,
+									"name" : "GMTDIFF_HOURS",
+									"start-bit" : 51
+								},
+								{
+									"bit-size" : 6,
+									"max" : 0,
+									"min" : 0,
+									"name" : "GMTDIFF_MINUTES",
+									"start-bit" : 61
+								},
+								{
+									"bit-size" : 1,
+									"name" : "GMT_DIFF",
+									"start-bit" : 55
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "HOUR",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "MINUTE",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "MONTH",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SUMMER",
+									"start-bit" : 60
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "YEAR",
+									"start-bit" : 0
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "UI_SETTING",
+					"pdus" : 
+					[
+						{
+							"id" : "0x611",
+							"length" : 8,
+							"name" : "UI_SETTING",
+							"signals" : 
+							[
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "km",
+											"value" : 1
+										},
+										{
+											"desc" : "miles",
+											"value" : 2
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "UNITS",
+									"start-bit" : 25
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "VIN_PART_1",
+					"pdus" : 
+					[
+						{
+							"id" : "0x580",
+							"length" : 8,
+							"name" : "VIN_PART_1",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_1",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_2",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_3",
+									"start-bit" : 16
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_4",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_5",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_6",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_7",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_8",
+									"start-bit" : 56
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "VIN_PART_2",
+					"pdus" : 
+					[
+						{
+							"id" : "0x581",
+							"length" : 8,
+							"name" : "VIN_PART_2",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_10",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_11",
+									"start-bit" : 16
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_12",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_13",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_14",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_15",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_16",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_9",
+									"start-bit" : 0
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "VIN_PART_3",
+					"pdus" : 
+					[
+						{
+							"id" : "0x582",
+							"length" : 8,
+							"name" : "VIN_PART_3",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "VIN_17",
+									"start-bit" : 0
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "WHEEL_SPEEDS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x0AA",
+							"length" : 8,
+							"name" : "WHEEL_SPEEDS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "WHEEL_SPEED_FL",
+									"offset" : -67.67,
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "WHEEL_SPEED_FR",
+									"offset" : -67.67,
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "WHEEL_SPEED_RL",
+									"offset" : -67.67,
+									"start-bit" : -56
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "WHEEL_SPEED_RR",
+									"offset" : -67.67,
+									"start-bit" : -40
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				}
+			],
+			"name" : "CHASSIS"
+		},
+		{
+			"frames" : 
+			[
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "ACCELEROMETER",
+					"pdus" : 
+					[
+						{
+							"id" : "0x228",
+							"length" : 8,
+							"name" : "ACCELEROMETER",
+							"signals" : 
+							[
+								{
+									"bit-size" : 15,
+									"factor" : 0.001,
+									"max" : 20,
+									"min" : -20,
+									"name" : "ACCEL_X",
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 15,
+									"max" : 32767,
+									"min" : 0,
+									"name" : "ACCEL_Z",
+									"start-bit" : -24
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "ACC_CONTROL",
+					"pdus" : 
+					[
+						{
+							"id" : "0x343",
+							"length" : 8,
+							"name" : "ACC_CONTROL",
+							"signals" : 
+							[
+								{
+									"bit-size" : 16,
+									"factor" : 0.001,
+									"max" : 20,
+									"min" : -20,
+									"name" : "ACCEL_CMD",
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 8,
+									"factor" : 0.05,
+									"max" : 0,
+									"min" : 0,
+									"name" : "ACCEL_CMD_ALT",
+									"start-bit" : -40
+								},
+								{
+									"bit-size" : 1,
+									"name" : "CANCEL_REQ",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 1,
+									"name" : "DISTANCE",
+									"start-bit" : 20
+								},
+								{
+									"bit-size" : 1,
+									"name" : "MINI_CAR",
+									"start-bit" : 21
+								},
+								{
+									"bit-size" : 1,
+									"name" : "PERMIT_BRAKING",
+									"start-bit" : 30
+								},
+								{
+									"bit-size" : 1,
+									"name" : "RELEASE_STANDSTILL",
+									"start-bit" : 31
+								},
+								{
+									"bit-size" : 2,
+									"max" : 3,
+									"min" : 0,
+									"name" : "SET_ME_X01",
+									"start-bit" : 22
+								},
+								{
+									"bit-size" : 4,
+									"max" : 15,
+									"min" : 0,
+									"name" : "SET_ME_X3",
+									"start-bit" : 16
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "ACC_HUD",
+					"pdus" : 
+					[
+						{
+							"id" : "0x411",
+							"length" : 8,
+							"name" : "ACC_HUD",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "FCW",
+									"start-bit" : 4
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X10",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X20",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+										"name" : "SET_ME_X80",
+									"start-bit" : 48
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "BRAKE_MODULE",
+					"pdus" : 
+					[
+						{
+							"id" : "0x226",
+							"length" : 8,
+							"name" : "BRAKE_MODULE",
+							"signals" : 
+							[
+								{
+									"bit-size" : 9,
+									"max" : 511,
+									"min" : 0,
+									"name" : "BRAKE_POSITION",
+									"start-bit" : 24
+								},
+								{
+									"bit-size" : 1,
+									"name" : "BRAKE_PRESSED",
+									"start-bit" : 37
+								},
+								{
+									"bit-size" : 9,
+									"max" : 511,
+									"min" : 0,
+									"name" : "BRAKE_PRESSURE",
+									"start-bit" : 8
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 7,
+					"name" : "DSU_CRUISE",
+					"pdus" : 
+					[
+						{
+							"id" : "0x365",
+							"length" : 7,
+							"name" : "DSU_CRUISE",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "CANCEL_BTN",
+									"start-bit" : 1
+								},
+								{
+									"bit-size" : 8,
+									"factor" : 100,
+									"max" : 0,
+									"min" : 0,
+									"name" : "CRUISE_REQUEST",
+									"offset" : -12800,
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "LEAD_DISTANCE",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 1,
+									"name" : "MAIN_ON",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 1,
+									"name" : "RES_BTN",
+									"start-bit" : 3
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SET_BTN",
+									"start-bit" : 2
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "SET_SPEED",
+									"start-bit" : 8
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "ENGINE_RPM",
+					"pdus" : 
+					[
+						{
+							"id" : "0x1C4",
+							"length" : 8,
+							"name" : "ENGINE_RPM",
+							"signals" : 
+							[
+								{
+									"bit-size" : 16,
+									"factor" : 0.78125,
+									"max" : 0,
+									"min" : 0,
+									"name" : "RPM",
+									"start-bit" : -8
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "EPS_STATUS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x262",
+							"length" : 8,
+							"name" : "EPS_STATUS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "disabled",
+											"value" : 1
+										},
+										{
+											"desc" : "enabled",
+											"value" : 3
+										},
+										{
+											"desc" : "override",
+											"value" : 5
+										}
+									],
+									"max" : 15,
+									"min" : 0,
+									"name" : "IPAS_STATE",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 7,
+									"enums" : 
+									[
+										{
+											"desc" : "standby",
+											"value" : 1
+										},
+										{
+											"desc" : "active",
+											"value" : 5
+										},
+										{
+											"desc" : "temporary_fault2",
+											"value" : 9
+										},
+										{
+											"desc" : "temporary_fault",
+											"value" : 25
+										}
+									],
+									"max" : 127,
+									"min" : 0,
+									"name" : "LKA_STATE",
+									"start-bit" : 25
+								},
+								{
+									"bit-size" : 1,
+									"name" : "TYPE",
+									"start-bit" : 24
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "ESP_CONTROL",
+					"pdus" : 
+					[
+						{
+							"id" : "0x3B7",
+							"length" : 8,
+							"name" : "ESP_CONTROL",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "BRAKE_LIGHTS_ACC",
+									"start-bit" : 18
+								},
+								{
+									"bit-size" : 1,
+									"name" : "TC_DISABLED",
+									"start-bit" : 13
+								},
+								{
+									"bit-size" : 2,
+									"max" : 1,
+									"min" : 0,
+									"name" : "VSC_DISABLED",
+									"start-bit" : 11
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "GAS_PEDAL",
+					"pdus" : 
+					[
+						{
+							"id" : "0x2C1",
+							"length" : 8,
+							"name" : "GAS_PEDAL",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"factor" : 0.005,
+									"max" : 1,
+									"min" : 0,
+									"name" : "GAS_PEDAL",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 1,
+									"name" : "GAS_RELEASED",
+									"start-bit" : 3
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "GEAR_PACKET",
+					"pdus" : 
+					[
+						{
+							"id" : "0x3BC",
+							"length" : 8,
+							"name" : "GEAR_PACKET",
+							"signals" : 
+							[
+								{
+									"bit-size" : 6,
+									"enums" : 
+									[
+										{
+											"desc" : "D",
+											"value" : 0
+										},
+										{
+											"desc" : "S",
+											"value" : 1
+										},
+										{
+											"desc" : "N",
+											"value" : 8
+										},
+										{
+											"desc" : "R",
+											"value" : 16
+										},
+										{
+											"desc" : "P",
+											"value" : 32
+										}
+									],
+									"max" : 63,
+									"min" : 0,
+									"name" : "GEAR",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SPORT_ON",
+									"start-bit" : 3
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "KINEMATICS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x024",
+							"length" : 8,
+							"name" : "KINEMATICS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 10,
+									"factor" : 0.03589,
+									"max" : 65535,
+									"min" : 0,
+									"name" : "ACCEL_Y",
+									"offset" : -18.375,
+									"start-bit" : -40
+								},
+								{
+									"bit-size" : 10,
+									"max" : 65535,
+									"min" : 0,
+									"name" : "STEERING_TORQUE",
+									"offset" : -512,
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 10,
+									"factor" : 0.244,
+									"max" : 65535,
+									"min" : 0,
+									"name" : "YAW_RATE",
+									"offset" : -125,
+									"start-bit" : -8
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "LEAD_INFO",
+					"pdus" : 
+					[
+						{
+							"id" : "0x2E6",
+							"length" : 8,
+							"name" : "LEAD_INFO",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 13,
+									"factor" : 0.05,
+									"max" : 300,
+									"min" : 0,
+									"name" : "LEAD_LONG_DIST",
+									"start-bit" : 11
+								},
+								{
+									"bit-size" : 12,
+									"factor" : 0.025,
+									"max" : 100,
+									"min" : -100,
+									"name" : "LEAD_REL_SPEED",
+									"start-bit" : -28
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "LIGHT_STALK",
+					"pdus" : 
+					[
+						{
+							"id" : "0x622",
+							"length" : 8,
+							"name" : "LIGHT_STALK",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "AUTO_HIGH_BEAM",
+									"start-bit" : 37
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "LKAS_HUD",
+					"pdus" : 
+					[
+						{
+							"id" : "0x412",
+							"length" : 8,
+							"name" : "LKAS_HUD",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "ADJUSTING_CAMERA",
+									"start-bit" : 13
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "left",
+											"value" : 1
+										},
+										{
+											"desc" : "right",
+											"value" : 2
+										},
+										{
+											"desc" : "both",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "BARRIERS",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "hold",
+											"value" : 1
+										},
+										{
+											"desc" : "LDA unavailable",
+											"value" : 2
+										},
+										{
+											"desc" : "hold with continuous beep",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "LDA_ALERT",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 1,
+									"name" : "LDA_MALFUNCTION",
+									"start-bit" : 15
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "solid",
+											"value" : 1
+										},
+										{
+											"desc" : "faded",
+											"value" : 2
+										},
+										{
+											"desc" : "orange",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "LEFT_LINE",
+									"start-bit" : 4
+								},
+								{
+									"bit-size" : 1,
+									"name" : "REPEATED_BEEPS",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "none",
+											"value" : 0
+										},
+										{
+											"desc" : "solid",
+											"value" : 1
+										},
+										{
+											"desc" : "faded",
+											"value" : 2
+										},
+										{
+											"desc" : "orange",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "RIGHT_LINE",
+									"start-bit" : 2
+								},
+								{
+									"bit-size" : 2,
+									"max" : 3,
+									"min" : 0,
+									"name" : "SET_ME_X01",
+									"start-bit" : 6
+								},
+								{
+									"bit-size" : 2,
+									"max" : 3,
+									"min" : 0,
+									"name" : "SET_ME_X01_2",
+									"start-bit" : 10
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X02",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X0C",
+									"start-bit" : 16
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X2C",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 8,
+									"max" : 1,
+									"min" : 0,
+									"name" : "SET_ME_X38",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 1,
+									"name" : "TWO_BEEPS",
+									"start-bit" : 12
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "PCM_CRUISE",
+					"pdus" : 
+					[
+						{
+							"id" : "0x1D2",
+							"length" : 8,
+							"name" : "PCM_CRUISE",
+							"signals" : 
+							[
+								{
+									"bit-size" : 16,
+									"factor" : 0.001,
+									"max" : 20,
+									"min" : -20,
+									"name" : "ACCEL_NET",
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 1,
+									"name" : "CANCEL_REQ",
+									"start-bit" : 49
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 1,
+									"name" : "CRUISE_ACTIVE",
+									"start-bit" : 5
+								},
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "off",
+											"value" : 1
+										},
+										{
+											"desc" : "standstill",
+											"value" : 7
+										},
+										{
+											"desc" : "active",
+											"value" : 8
+										}
+									],
+									"max" : 15,
+									"min" : 0,
+									"name" : "CRUISE_STATE",
+									"start-bit" : 52
+								},
+								{
+									"bit-size" : 1,
+									"name" : "GAS_RELEASED",
+									"start-bit" : 4
+								},
+								{
+									"bit-size" : 1,
+									"name" : "STANDSTILL_ON",
+									"start-bit" : 12
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "PCM_CRUISE_2",
+					"pdus" : 
+					[
+						{
+							"id" : "0x1D3",
+							"length" : 8,
+							"name" : "PCM_CRUISE_2",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "ok",
+											"value" : 1
+										},
+										{
+											"desc" : "low speed locked",
+											"value" : 2
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "LOW_SPEED_LOCKOUT",
+									"start-bit" : 13
+								},
+								{
+									"bit-size" : 1,
+									"name" : "MAIN_ON",
+									"start-bit" : 15
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SET_SPEED",
+									"start-bit" : 16
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "PCM_CRUISE_SM",
+					"pdus" : 
+					[
+						{
+							"id" : "0x399",
+							"length" : 8,
+							"name" : "PCM_CRUISE_SM",
+							"signals" : 
+							[
+								{
+									"bit-size" : 4,
+									"enums" : 
+									[
+										{
+											"desc" : "disabled",
+											"value" : 2
+										},
+										{
+											"desc" : "faulted",
+											"value" : 5
+										},
+										{
+											"desc" : "enabled",
+											"value" : 6
+										},
+										{
+											"desc" : "hold_waiting_user_cmd",
+											"value" : 10
+										},
+										{
+											"desc" : "hold",
+											"value" : 11
+										}
+									],
+									"max" : 15,
+									"min" : 0,
+									"name" : "CRUISE_CONTROL_STATE",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 2,
+									"max" : 3,
+									"min" : 0,
+									"name" : "DISTANCE_LINES",
+									"start-bit" : 13
+								},
+								{
+									"bit-size" : 1,
+									"name" : "MAIN_ON",
+									"start-bit" : 4
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "UI_SET_SPEED",
+									"start-bit" : 24
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 7,
+					"name" : "PRE_COLLISION",
+					"pdus" : 
+					[
+						{
+							"id" : "0x283",
+							"length" : 7,
+							"name" : "PRE_COLLISION",
+							"signals" : 
+							[
+								{
+									"bit-size" : 3,
+									"max" : 255,
+									"min" : 0,
+									"name" : "BRAKE_STATUS",
+									"start-bit" : 37
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 48
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "COUNTER",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 2,
+									"max" : 255,
+									"min" : 0,
+									"name" : "FORCE",
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 1,
+									"name" : "PRECOLLISION_ACTIVE",
+									"start-bit" : 41
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "SET_ME_X00",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 8,
+									"max" : 3,
+									"min" : 0,
+									"name" : "SET_ME_X002",
+									"start-bit" : 42
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SET_ME_X003",
+									"start-bit" : 40
+								},
+								{
+									"bit-size" : 3,
+									"enums" : 
+									[
+										{
+											"desc" : "normal",
+											"value" : 0
+										},
+										{
+											"desc" : "adaptive_cruise_control",
+											"value" : 1
+										},
+										{
+											"desc" : "emergency_braking",
+											"value" : 3
+										}
+									],
+									"max" : 255,
+									"min" : 0,
+									"name" : "STATE",
+									"start-bit" : 34
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "PRE_COLLISION_2",
+					"pdus" : 
+					[
+						{
+							"id" : "0x344",
+							"length" : 8,
+							"name" : "PRE_COLLISION_2",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "SEATS_DOORS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x620",
+							"length" : 8,
+							"name" : "SEATS_DOORS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 1,
+									"name" : "DOOR_OPEN_FL",
+									"start-bit" : 45
+								},
+								{
+									"bit-size" : 1,
+									"name" : "DOOR_OPEN_FR",
+									"start-bit" : 44
+								},
+								{
+									"bit-size" : 1,
+									"name" : "DOOR_OPEN_RL",
+									"start-bit" : 42
+								},
+								{
+									"bit-size" : 1,
+									"name" : "DOOR_OPEN_RR",
+									"start-bit" : 43
+								},
+								{
+									"bit-size" : 1,
+									"name" : "SEATBELT_DRIVER_UNLATCHED",
+									"start-bit" : 62
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "SPEED",
+					"pdus" : 
+					[
+						{
+							"id" : "0x0B4",
+							"length" : 8,
+							"name" : "SPEED",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "ENCODER",
+									"start-bit" : 32
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "SPEED",
+									"start-bit" : 48
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "STEERING_LEVERS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x614",
+							"length" : 8,
+							"name" : "STEERING_LEVERS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "left",
+											"value" : 1
+										},
+										{
+											"desc" : "right",
+											"value" : 2
+										},
+										{
+											"desc" : "none",
+											"value" : 3
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "TURN_SIGNALS",
+									"start-bit" : 28
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "STEER_ANGLE_SENSOR",
+					"pdus" : 
+					[
+						{
+							"id" : "0x025",
+							"length" : 8,
+							"name" : "STEER_ANGLE_SENSOR",
+							"signals" : 
+							[
+								{
+									"bit-size" : 12,
+									"factor" : 1.5,
+									"max" : 500,
+									"min" : -500,
+									"name" : "STEER_ANGLE",
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 4,
+									"factor" : 0.1,
+									"max" : 0.7,
+									"min" : -0.7,
+									"name" : "STEER_FRACTION",
+									"start-bit" : -36
+								},
+								{
+									"bit-size" : 12,
+									"max" : 2000,
+									"min" : -2000,
+									"name" : "STEER_RATE",
+									"start-bit" : -40
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "STEER_TORQUE_SENSOR",
+					"pdus" : 
+					[
+						{
+							"id" : "0x260",
+							"length" : 8,
+							"name" : "STEER_TORQUE_SENSOR",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 255,
+									"min" : 0,
+									"name" : "CHECKSUM",
+									"start-bit" : 56
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.0573,
+									"max" : 500,
+									"min" : -500,
+									"name" : "STEER_ANGLE",
+									"start-bit" : -32
+								},
+								{
+									"bit-size" : 1,
+									"name" : "STEER_OVERRIDE",
+									"start-bit" : 0
+								},
+								{
+									"bit-size" : 16,
+									"max" : 32767,
+									"min" : -32768,
+									"name" : "STEER_TORQUE_DRIVER",
+									"start-bit" : -16
+								},
+								{
+									"bit-size" : 16,
+									"max" : 20000,
+									"min" : -20000,
+									"name" : "STEER_TORQUE_EPS",
+									"start-bit" : -48
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "UI_SETTING",
+					"pdus" : 
+					[
+						{
+							"id" : "0x611",
+							"length" : 8,
+							"name" : "UI_SETTING",
+							"signals" : 
+							[
+								{
+									"bit-size" : 2,
+									"enums" : 
+									[
+										{
+											"desc" : "km",
+											"value" : 1
+										},
+										{
+											"desc" : "miles",
+											"value" : 2
+										}
+									],
+									"max" : 3,
+									"min" : 0,
+									"name" : "UNITS",
+									"start-bit" : 25
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "WHEEL_SPEEDS",
+					"pdus" : 
+					[
+						{
+							"id" : "0x0AA",
+							"length" : 8,
+							"name" : "WHEEL_SPEEDS",
+							"signals" : 
+							[
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "WHEEL_SPEED_FL",
+									"offset" : -67.67,
+									"start-bit" : -24
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "WHEEL_SPEED_FR",
+									"offset" : -67.67,
+									"start-bit" : -8
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "WHEEL_SPEED_RL",
+									"offset" : -67.67,
+									"start-bit" : -56
+								},
+								{
+									"bit-size" : 16,
+									"factor" : 0.01,
+									"max" : 250,
+									"min" : 0,
+									"name" : "WHEEL_SPEED_RR",
+									"offset" : -67.67,
+									"start-bit" : -40
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				}
+			],
+			"name" : "DOMAIN"
+		},
+		{
+			"frames" : 
+			[
+				{
+					"cycle" : 0,
+					"direction" : "TX",
+					"length" : 8,
+					"name" : "SGW_UDSPhysicalResp",
+					"pdus" : 
+					[
+						{
+							"id" : "0x718",
+							"length" : 8,
+							"name" : "SGW_UDSPhysicalResp",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "DataByte",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "FrameType",
+									"start-bit" : 0
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "UDSFunctionalReq",
+					"pdus" : 
+					[
+						{
+							"id" : "0x7DF",
+							"length" : 8,
+							"name" : "UDSFunctionalReq",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "DataByte",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "FrameType",
+									"start-bit" : 0
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				},
+				{
+					"cycle" : 0,
+					"direction" : "RX",
+					"length" : 8,
+					"name" : "UDSPhysicalReq_SGW",
+					"pdus" : 
+					[
+						{
+							"id" : "0x710",
+							"length" : 8,
+							"name" : "UDSPhysicalReq_SGW",
+							"signals" : 
+							[
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "DataByte",
+									"start-bit" : 8
+								},
+								{
+									"bit-size" : 8,
+									"max" : 0,
+									"min" : 0,
+									"name" : "FrameType",
+									"start-bit" : 0
+								}
+							],
+							"start" : 0
+						}
+					],
+					"protocol" : "CAN"
+				}
+			],
+			"name" : "OBD"
+		}
+	],
+	"name" : "SGW"
+}
